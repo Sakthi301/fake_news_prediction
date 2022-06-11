@@ -1,3 +1,5 @@
+#Implement all this concept by machine learning with flask
+
 from flask import Flask, escape, request, render_template
 import pickle
 
@@ -19,12 +21,13 @@ def prediction():
         predict = model.predict(vector.transform([news]))[0]
         print(predict)
 
-        return render_template("prediction.html", prediction_text="News headline is -> {}".format
-        (predict))
+        return render_template("prediction.html", prediction_text="News headline is -> {}".format(predict))
+
 
     else:
         return render_template("prediction.html")
 
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()
