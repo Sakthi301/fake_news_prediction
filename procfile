@@ -1,1 +1,1 @@
-web: gunicorn fakenewsdetection85.wsgi
+web: gunicorn fakenewsdetection385.wsgi
